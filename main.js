@@ -1,4 +1,3 @@
-
 function type(type) {
     let types = Object.prototype.toString.call(type)
     return types.substring(types.indexOf(' ') + 1, types.length - 1)
@@ -77,26 +76,4 @@ Axios.prototype.get = function (url, options, callback) {
 
 let axios = new Axios({
     BASE_URL: "http://1.14.68.137:8000"
-})
-
-axios.post('/api/v0/owner/', {
-    responseType: 'json',
-    params: {
-        name: '小马哥',
-        phone_number: 18191347562,
-        home_number: '3-3-3',
-        park_lot: 255,
-        park_state: 1
-    }
-}, function (res) {
-    console.log(res);
-})
-
-axios.get("/api/v0/owner/", {
-    responseType: 'json',
-    params: {
-        page: '3',
-    }
-}, function (res) {
-    console.log(res);
 })
